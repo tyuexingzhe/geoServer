@@ -1,0 +1,9 @@
+logs/
+npm-debug.log
+node_modules/
+coverage/
+run/
+.DS_Store
+*.swp
+stderr.log
+stdout.log

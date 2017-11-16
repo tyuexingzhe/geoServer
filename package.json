@@ -1,0 +1,46 @@
+{
+  "name": "AccBlogServer",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "egg": "^1.5.0",
+    "egg-mongoose": "^2.1.0",
+    "egg-scripts": "^1.2.0",
+    "egg-validate": "^1.0.0",
+    "stream-wormhole": "^1.0.3"
+  },
+  "devDependencies": {
+    "autod": "^2.8.0",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.0.4",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.7.0",
+    "eslint": "^4.1.1",
+    "eslint-config-egg": "^5.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start",
+    "stop":"egg-scripts stop",
+    "dev": "egg-bin dev",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "prod": "EGG_SERVER_ENV=prod nohup node dispatch.js > stdout.log 2> stderr.log &"
+  },
+  "ci": {
+    "version": "6, 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/accelerator-feng/AccBlogServer.git"
+  },
+  "author": "Geo",
+  "license": "MIT"
+}
