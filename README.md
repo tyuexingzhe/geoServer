@@ -1,4 +1,4 @@
-# [AccBlogServer](https://github.com/accelerator-feng/AccBlogServer)
+# [AccBlogServer](https://github.com/accelerator-feng/AccBlogServer) 魔改
 
 
 ## egg + mongodb
@@ -42,9 +42,3 @@ GET /api/archives/:year/:month
 分类
 GET /api/categories/:category
 ```
-
----
-![Markdown](http://i2.kiimg.com/582196/c229d2f00d338d96.png)
----
-
-[egg]: https://eggjs.org
