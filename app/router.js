@@ -38,9 +38,24 @@ module.exports = app => {
   //所有模型
   app.get('/api/models','model.showAll')
 
-   //所有模型
-   app.get('/api/posts','post.showAll')
+  //所有模型
+  app.get('/api/posts','post.showAll')
 
-   //获取dashboard数据
-   app.get('/api/dashboard','dashboard.showAll')
+  //获取dashboard数据
+  app.get('/api/dashboard','dashboard.showAll')
+
+  //获取所有资源节点的信息
+  app.get('/api/resources','resource.showAll')
+
+  //获取单个资源节点的信息
+  app.get('/api/resource/:id','resource.showResource')
+
+  //新增数据
+  app.post('/api/resource','resource.updateResource')
+
+  //删除一条数据
+  app.delete('/api/resource/:id','resource.removeResource')
+
+  //修改数据
+  app.patch('/api/resource/:id','resource.patchResource')
 };
