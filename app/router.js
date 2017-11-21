@@ -56,6 +56,9 @@ module.exports = app => {
   //删除一条数据
   app.delete('/api/resource/:id','resource.removeResource')
 
+  //删除多条数据
+  app.delete('/api/resources','resource.removeResources')
+
   //修改数据
   app.patch('/api/resource/:id','resource.patchResource')
 };

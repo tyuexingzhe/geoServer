@@ -44,7 +44,7 @@ module.exports = app => {
           newData.avatar = newData.avatar || Mock.Random.image('100x100', Mock.Random.color(), '#757575', 'png', newData.name.substr(0, 1))
           newData.id = Mock.mock('@id')
           console.log(newData)
-          await this.ctx.model.Resource.update(newData);
+          await this.ctx.model.Resource.create(newData);
 
           this.ctx.status = 200
         }
@@ -74,6 +74,11 @@ module.exports = app => {
           }else{
             this.ctx.response.status = 400
           }
+        }
+
+        async removeResources(ids){
+          await this.ctx.model.Resource.remove({id:{$in : ids}})
+          this.ctx.response.status = 200
         }
     }
     return resource

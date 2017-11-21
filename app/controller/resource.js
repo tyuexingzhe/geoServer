@@ -41,6 +41,15 @@ module.exports = (app) => {
             } = this
             await service.resource.patchResource(ctx.params.id,ctx.request.body)
         }
+
+        async removeResources(){
+            const{
+                ctx,
+                service
+            } = this
+            const { ids } = ctx.request.body
+            await service.resource.removeResources(ids)
+        }
     }
     return resource
 }

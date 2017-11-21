@@ -5,10 +5,11 @@ module.exports = app=>{
     const ResourceSchema = new mongoose.Schema({
         id: { type: String, required: true },
         name: { type: String,required:true },
-        nickName : { type: String, required: true },
         phone : { type: String, required: true },
         hardware : { type: String, required: true },
         software : { type: String, required: true },
+        ip: {type: String, required: true},
+        port : {type: String, required: true},
         location :{type: String, required: true},
         isUsed :{type: Boolean, required: true},
         email :{ type: String, required: true },
